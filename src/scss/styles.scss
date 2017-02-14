@@ -1,0 +1,26 @@
+@import '../../node_modules/@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.hyf-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hyf-content {
+  flex: 1;
+  overflow: auto;
+  padding: 8px;
+}
+
+.hyf-caption {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

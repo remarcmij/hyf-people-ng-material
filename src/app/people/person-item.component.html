@@ -1,0 +1,8 @@
+<md-list-item (click)="openDetails()">
+  <img md-list-avatar [src]="person.pictureUrl" alt="Photo"/>
+  <h3 md-line>{{person.name}}</h3>
+  <p md-line>
+    <span>{{roleTitle}}</span>
+    <span class="hyf-caption"> — {{person.organisation}}</span>
+  </p>
+</md-list-item>

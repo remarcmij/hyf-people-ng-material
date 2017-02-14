@@ -1,0 +1,15 @@
+<md-sidenav-container>
+  <md-sidenav #mainSidenav [opened]="opened" (close)="close.emit()">
+    <md-toolbar>
+      HYF People Menu
+      <span class="spacer"></span>
+      <button md-icon-button (click)="mainSidenav.close()">
+        <md-icon class="md-24">close</md-icon>
+      </button>
+    </md-toolbar>
+    <md-nav-list>
+      <a md-list-item routerLink="/about">About Hack Your Future</a>
+    </md-nav-list>
+  </md-sidenav>
+  <ng-content></ng-content>
+</md-sidenav-container>

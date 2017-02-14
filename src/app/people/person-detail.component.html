@@ -1,0 +1,25 @@
+<div class="hyf-container">
+    <hyf-child-toolbar [title]="'HYF Person'"></hyf-child-toolbar>
+    <div class="hyf-content">
+        <hyf-flex-container>
+            <md-card *ngIf="person">
+                <md-card-title-group>
+                    <img md-card-sm-image [src]="person.pictureUrl" alt="Photo">
+                    <md-card-subtitle>{{roleTitle}}</md-card-subtitle>
+                    <md-card-title>{{person.name}}</md-card-title>
+                </md-card-title-group>
+                <md-card-content *ngIf="person.bio">
+                    <p [innerHTML]="getSafeBioHtml()"></p>
+                </md-card-content>
+                <md-card-actions>
+                    <button md-button *ngIf="person.twitterUrl" (click)="openExternalUrl(person.twitterUrl)">
+                        Twitter
+                    </button>
+                    <button md-button *ngIf="person.linkedInUrl" (click)="openExternalUrl(person.linkedInUrl)">
+                        LinkedIn
+                    </button>
+                </md-card-actions>
+            </md-card>
+        </hyf-flex-container>
+    </div>
+</div>

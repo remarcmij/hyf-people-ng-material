@@ -1,0 +1,12 @@
+<hyf-main-sidenav [opened]="sidenavOpened" (close)="sidenavOpened = false">
+  <div class="hyf-container">
+    <hyf-main-toolbar [title]="'HYF People'" (openSidenav)="sidenavOpened = true"></hyf-main-toolbar>
+    <div class="hyf-content">
+      <hyf-flex-container>
+        <md-list>
+          <hyf-person-item *ngFor="let person of persons" [person]="person"></hyf-person-item>
+        </md-list>
+      </hyf-flex-container>
+    </div>
+  </div>
+</hyf-main-sidenav>
